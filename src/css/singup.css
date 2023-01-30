@@ -1,0 +1,78 @@
+.singup_input {
+  width: 100%;
+  margin: 20px auto;
+  padding: 1.5rem 2rem;
+  color: white;
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 0;
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+  outline: none;
+}
+
+.singup_input::placeholder {
+  font-size: 0.55rem;
+  font-family: var(--font-family-text);
+  text-transform: uppercase;
+  opacity: 1;
+  color : white;
+}
+
+.singup_input:focus::placeholder {
+  opacity: 0.8;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.error_message_singup {
+  width: 100%;
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+  display: none;
+}
+
+.singup_input:invalid[focus='true'] ~ span {
+  display: block;
+}
+
+.singup_input:invalid[focus='true'] {
+  border: 2px solid red;
+}
+
+@media (min-width: 1260px) {
+
+  .singup_input {
+    width: 100%;
+    padding: 1.5rem;
+    margin: 20px auto;
+    background: transparent;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
+    outline: none;
+  }
+
+  .singup_input::placeholder {
+    font-size: 0.55rem;
+    font-family: var(--font-family-text);
+    text-transform: uppercase;
+    color: black;
+    opacity: 1;
+  }
+
+  .singup_input:focus {
+      color: black;
+  }
+
+  .singup_input:focus::placeholder {
+    opacity: 0.8;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  .error_message_singup {
+  width: 100%;
+  font-size: 14px;
+  color: red;
+  display: none;
+}
+
+}
