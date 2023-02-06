@@ -50,14 +50,9 @@ const VinylsList = ({ search, handleAddToCart }) => {
           <SearchResultContainer>
             <p style={{ margin: '1.5rem auto'}}>{error}</p>
           </SearchResultContainer>
-        ) : products ? (
+        ) : (
           <VinylList>
-            {search(products).length === 0 ? (
-              <SearchResultContainer>
-                <p>Pas de resultats pour votre recherche</p>
-              </SearchResultContainer>
-            ) : (
-              search(products).map((vinyl) => {
+            {products.map((vinyl) => {
                 return (
                   <Vinyl
                     key={vinyl._id}
@@ -66,12 +61,8 @@ const VinylsList = ({ search, handleAddToCart }) => {
                   ></Vinyl>
                 )
               })
-            )}
+            }
           </VinylList>
-        ) : (
-          <SearchResultContainer>
-            <p>Pas de resultats pour votre recherche...</p>
-          </SearchResultContainer>
         )}
       </>
     </>
