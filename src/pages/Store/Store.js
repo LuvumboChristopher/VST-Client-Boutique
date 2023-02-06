@@ -10,7 +10,7 @@ const Store = () => {
 
   const search = (data) => {
     const keys = ['title', 'author', 'description']
-    return data.filter((item) =>
+    return Object.values(data).filter((item) =>
       keys.some((key) => item[key].toLowerCase().includes(searchTerm))
     )
   }
