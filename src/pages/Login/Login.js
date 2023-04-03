@@ -50,7 +50,7 @@ const Title = () => {
   const navigate = useNavigate()
   return (
     <LoginHeader
-      onClick={() => navigate('/store')}
+      onClick={() => navigate('/')}
       style={{ cursor: 'pointer' }}
     >
       <VsLogo src={Vslogo} title='VinyleStore Logo' alt='VinylStore Logo' />
