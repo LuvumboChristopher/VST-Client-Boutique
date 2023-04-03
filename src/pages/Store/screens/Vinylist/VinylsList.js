@@ -18,7 +18,7 @@ const reducer = (state, action) => {
 }
 const VinylsList = ({ search, handleAddToCart }) => {
   const [{ loading, error, products }, dispatch] = useReducer(reducer, {
-    products: [{}],
+    products: '',
     loading: true,
     error: '',
   })
@@ -38,35 +38,33 @@ const VinylsList = ({ search, handleAddToCart }) => {
     fecthproducts()
   }, [])
 
-  console.log(Array.isArray(products))
   return (
     <>
       <>
         {loading ? (
           <SearchResultContainer>
-            <p style={{ margin: '1.5rem auto'}}> En cours de chargement...</p>
+            <p style={{ margin: "1.5rem auto" }}> En cours de chargement...</p>
           </SearchResultContainer>
         ) : error ? (
           <SearchResultContainer>
-            <p style={{ margin: '1.5rem auto'}}>{error}</p>
+            <p style={{ margin: "1.5rem auto" }}>{error}</p>
           </SearchResultContainer>
-        ) :(
+        ) : (
           <VinylList>
-            {products.map((vinyl) => {
-                return (
-                  <Vinyl
-                    key={vinyl._id}
-                    {...vinyl}
-                    handleAddToCart={handleAddToCart}
-                  ></Vinyl>
-                )
-              })
-            }
+            {products.data.map((vinyl) => {
+              return (
+                <Vinyl
+                  key={vinyl._id}
+                  {...vinyl}
+                  handleAddToCart={handleAddToCart}
+                ></Vinyl>
+              );
+            })}
           </VinylList>
         )}
       </>
     </>
-  )
+  );
 }
 
 export default VinylsList 
