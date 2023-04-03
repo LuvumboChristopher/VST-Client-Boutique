@@ -71,7 +71,7 @@ const StoreHeader = () => {
             <RiLoginCircleFill style={{ margin: 'auto', fontSize: '1.6em' }} />
           </StoreNavButtons>
         )}
-        <BacktoSiteButton to='https://vinylstorelyon.vercel.app/' >
+        <BacktoSiteButton href='https://vinylstorelyon.vercel.app/' >
           <SiHomebridge style={{ margin: 'auto', fontSize: '1.3em' }} />
         </BacktoSiteButton>
         <CartButton to='/panier'>
