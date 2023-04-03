@@ -36,7 +36,7 @@ const StoreHeader = () => {
   return (
     <StoreHeaderContainer>
       <StoreHeaderContent>
-        <Link to='/store'>
+        <Link to='/'>
         <LogoStore src={VsLogoBlack} alt='logo' />
       </Link>
       <StoreNavContainer>
@@ -71,7 +71,7 @@ const StoreHeader = () => {
             <RiLoginCircleFill style={{ margin: 'auto', fontSize: '1.6em' }} />
           </StoreNavButtons>
         )}
-        <BacktoSiteButton to='/' >
+        <BacktoSiteButton to='/vinylstorelyon.vercel.app' >
           <SiHomebridge style={{ margin: 'auto', fontSize: '1.3em' }} />
         </BacktoSiteButton>
         <CartButton to='/panier'>
