@@ -27,7 +27,7 @@ const VinylsList = ({ search, handleAddToCart }) => {
     const fecthproducts = async () => {
       dispatch({ type: 'FETCH_REQUEST' })
       try {
-        const url = '/api/v1/products'
+        const url = "https://vst-server.vercel.app/api/v1/products";
         axios.get(url).then((res) => {
           dispatch({ type: "FETCH_SUCCESS", payload: res.data });
         });
@@ -38,6 +38,16 @@ const VinylsList = ({ search, handleAddToCart }) => {
     }
     fecthproducts()
   }, [])
+
+  const vinyl= products.map((vinyl) => {
+    return (
+      <Vinyl
+        key={vinyl._id}
+        {...vinyl}
+        handleAddToCart={handleAddToCart}
+      ></Vinyl>
+    );
+  });
 
   return (
     <>
@@ -51,17 +61,7 @@ const VinylsList = ({ search, handleAddToCart }) => {
             <p style={{ margin: "1.5rem auto" }}>{error}</p>
           </SearchResultContainer>
         ) : (
-          <VinylList>
-            {products.map((vinyl) => {
-              return (
-                <Vinyl
-                  key={vinyl._id}
-                  {...vinyl}
-                  handleAddToCart={handleAddToCart}
-                ></Vinyl>
-              );
-            })}
-          </VinylList>
+          <VinylList>{vinyl}</VinylList>
         )}
       </>
     </>
