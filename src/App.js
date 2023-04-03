@@ -34,7 +34,6 @@ function App() {
         <Route path='/' element={<Store />} />
         <Route path='/inscription' element={<Singup />} />
         <Route path='/connexion' element={<Login />} />
-        <Route path='/store' element={<Store />} />
         <Route path='/panier' element={<Cart />} />
         <Route path='/products/:id' element={<Product />} />
 
@@ -46,7 +45,6 @@ function App() {
             </RequireAuth>
           }
         />
-        
         <Route
           path='/paiement'
           element={

@@ -77,15 +77,15 @@ export const LogoStore = styled.img`
 
 export const ContentContainer = styled.div`
   width: 90%;
+  max-width: 1440px;
   margin: auto;
   @media (max-width: 768px) {
-    width: 85%;
     margin: 10.5rem auto 0;
     border: none;
     display: grid;
     place-items: center;
   }
-`
+`;
 
 export const Copyright = styled.div`
   width: 100%;
@@ -95,7 +95,7 @@ export const Copyright = styled.div`
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 3px;
-`
+`;
 /*------------------------------------------------------------StoreNav------------------------------------------------------------*/
 
 export const StoreNavContainer = styled.div`
@@ -106,7 +106,7 @@ export const StoreNavContainer = styled.div`
     border-top: 1px solid black;
     border-bottom: 1px solid black;
   }
-`
+`;
 
 export const StoreNavButtons = styled(Link)`
   width: 105px;
@@ -129,7 +129,7 @@ export const StoreNavButtons = styled(Link)`
     margin: auto;
     border: none;
   }
-`
+`;
 export const BacktoSiteButton = styled(StoreNavButtons)`
   color: black;
   background-color: white;
@@ -141,7 +141,7 @@ export const BacktoSiteButton = styled(StoreNavButtons)`
     background: transparent;
     color: black;
   }
-`
+`;
 
 export const Amount = styled.span`
   width: 25px;
@@ -154,7 +154,7 @@ export const Amount = styled.span`
   bottom: 20px;
   left: 30px;
   font-size: 0.8em;
-`
+`;
 
 export const CartButton = styled(StoreNavButtons)`
   background-color: rgb(129, 8, 8);
@@ -166,7 +166,7 @@ export const CartButton = styled(StoreNavButtons)`
     color: white;
     background-color: rgb(129, 8, 8);
   }
-`
+`;
 
 export const CartButtonContainer = styled.div`
   position: relative;
@@ -174,7 +174,7 @@ export const CartButtonContainer = styled.div`
   display: grid;
   place-items: center;
   margin: 0;
-`
+`;
 
 export const DropDownContent = styled.div`
   padding: 2rem auto;
@@ -192,7 +192,7 @@ export const DropDownContent = styled.div`
     margin: auto;
     border-bottom: 1px solid black;
   }
-`
+`;
 
 export const DropDown = styled.div`
   position: relative;
@@ -204,7 +204,7 @@ export const DropDown = styled.div`
   @media (max-width: 768px) {
     width: 100%;
   }
-`
+`;
 
 export const DropDownLink = styled(Link)`
   width: 100%;
@@ -220,7 +220,7 @@ export const DropDownLink = styled(Link)`
     background: black !important;
     border-top: 1px solid white;
   }
-`
+`;
 
 /*------------------------------------------------------------Search------------------------------------------------------------*/
 
@@ -231,7 +231,7 @@ export const SearchWrapper = styled.div`
   display: flex;
   align-items: center;
   border-bottom: 1px solid rgba(0, 0, 0, 1);
-`
+`;
 export const SearchInput = styled.input`
   width: 100%;
   margin: auto;
@@ -242,11 +242,11 @@ export const SearchInput = styled.input`
   &:focus {
     outline: none;
   }
-`
+`;
 export const SearchResultContainer = styled.div`
   width: 100%;
   margin: 1rem auto;
-`
+`;
 /*------------------------------------------------------------Vinylist------------------------------------------------------------*/
 
 export const VinylListContainer = styled.div`
@@ -256,11 +256,11 @@ export const VinylListContainer = styled.div`
     width: 100%;
     margin: auto;
   }
-`
+`;
 export const ListWrapper = styled.div`
   width: 100%;
   margin: auto;
-`
+`;
 export const VinylList = styled.div`
   @media (min-width: 1340px) {
     width: 100%;
@@ -278,15 +278,12 @@ export const VinylList = styled.div`
     grid-template-columns: repeat(4, minmax(0, 100%));
     gap: 5rem 4rem;
   }
-  
-`
+`;
 
 /*------------------------------------------------------------VinylistItem------------------------------------------------------------*/
 
-
-
 export const VinylItem = styled.div`
-  width: 275px;
+  width: 255px;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -305,10 +302,10 @@ export const VinylItem = styled.div`
     width: 100%;
     margin: 2.5rem auto 4.5rem;
   }
-  @media (min-width: 425px) and (max-width: 630px)   {
+  @media (min-width: 425px) and (max-width: 630px) {
     max-width: 405px;
   }
-`
+`;
 
 export const VinylCoverContainer = styled.div`
   width: 190px;

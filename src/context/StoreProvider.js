@@ -18,7 +18,7 @@ const initialState = {
 
 const reducer = (state, action) => {
   switch (action.type) {
-    //Anadir productos al carrito de compra
+   
     case 'CART_ADD_ITEM':
       const newItem = action.payload
       const existItem = state.cart.cartItems.find(
@@ -32,7 +32,7 @@ const reducer = (state, action) => {
       localStorage.setItem('cartItems', JSON.stringify(cartItems))
       return { ...state, cart: { ...state.cart, cartItems } }
 
-    //Quitar productos al carrito de compra
+
     case 'CART_REMOVE_ITEM': {
       const cartItems = state.cart.cartItems.filter(
         (item) => item._id !== action.payload._id

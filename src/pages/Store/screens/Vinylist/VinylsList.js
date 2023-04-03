@@ -50,7 +50,7 @@ const VinylsList = ({ search, handleAddToCart }) => {
           <SearchResultContainer>
             <p style={{ margin: '1.5rem auto'}}>{error}</p>
           </SearchResultContainer>
-        ) : (
+        ) :(
           <VinylList>
             {products.map((vinyl) => {
                 return (
