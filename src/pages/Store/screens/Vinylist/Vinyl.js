@@ -10,6 +10,7 @@ import {
   VinylPurchase,
   VinylPurchaseButton,
   VinylInfoContainer,
+  VinylCoverContainer,
 } from '../../style.js'
 
 const Vinyl = (vinyl) => {
@@ -33,18 +34,20 @@ const Vinyl = (vinyl) => {
 
   return (
     <VinylItem>
-      <VinylCover             
-        src={img}
-        alt={title}
-        onClick={() => navigate(`/products/${_id}`)}
-      />
+      <VinylCoverContainer>
+        <VinylCover
+          src={img}
+          alt={title}
+          onClick={() => navigate(`/products/${_id}`)}
+        />
+      </VinylCoverContainer>
       <VinylInfoContainer>
         <div>
           <div>
             <h2
               onClick={() => navigate(`/products/${_id}`)}
               style={{
-                cursor: 'pointer',
+                cursor: "pointer",
               }}
             >
               {title}
@@ -54,7 +57,7 @@ const Vinyl = (vinyl) => {
           </div>
           <VinylInfoText>
             {description.slice(0, 220)}
-            {description.length > 220 && '...'}
+            {description.length > 220 && "..."}
           </VinylInfoText>
         </div>
         <VinylPurchase>
@@ -66,11 +69,11 @@ const Vinyl = (vinyl) => {
               Acheter
             </VinylPurchaseButton>
           </div>
-          <h1 style={{ fontSize: '1.20rem' }}>{price} €</h1>
+          <h1 style={{ fontSize: "1.20rem" }}>{price} €</h1>
         </VinylPurchase>
       </VinylInfoContainer>
     </VinylItem>
-  )
+  );
 }
 
 export { Vinyl }

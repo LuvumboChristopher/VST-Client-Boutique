@@ -2,7 +2,7 @@ import React, { useEffect, useReducer } from 'react'
 import { Vinyl } from './Vinyl'
 import axios from 'axios'
 
-import { VinylListContainer, ListWrapper, VinylList, SearchResultContainer } from '../../style.js'
+import { VinylList, SearchResultContainer } from '../../style.js'
 
 const reducer = (state, action) => {
   switch (action.type) {

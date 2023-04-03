@@ -1,17 +1,15 @@
 import styled from 'styled-components'
 
 export const ProductContentContainer = styled.div`
-  width: 90%;
+  width: 100%;
   margin: auto;
   @media (max-width: 769px) {
-    width: 85%;
-    max-width: 425px;
-    margin: 12rem auto auto;
+    margin: 1rem auto 0;
   }
 `
 
 export const ProductScreenWrapper = styled.div`
-  width: fit-content;
+  width: 100%;
   margin: auto;
   display: flex;
   justify-content: space-between;
@@ -24,7 +22,7 @@ export const ProductScreenWrapper = styled.div`
     place-items: center;
     gap: 1rem;
   }
-`
+`;
 
 export const ContentWrapper = styled.div`
   width: 100%;
@@ -69,10 +67,11 @@ export const ProductVinylCoverContainer = styled.div`
 export const ProductVinylCover = styled.img`
   width: 100%;
   margin: auto;
+  max-width: 430px;
   box-shadow: 2px 3px 23px -3px rgba(0, 0, 0, 0.25);
   transition: transform 100ms ease-in-out;
   cursor: zoom-in;
-`
+`;
 
 export const InfoContainer = styled.div`
   width: 100%;

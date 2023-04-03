@@ -33,8 +33,8 @@ export const TopButtonIcon = styled(Icon)`
 export const StoreContainer = styled.div`
   width: 100%;
   margin: auto;
-  max-width: 1580px;
-`
+  max-width: 1440px;
+`;
 
 export const StoreHeaderContainer = styled.div`
   width: 100%;
@@ -47,8 +47,10 @@ export const StoreHeaderContainer = styled.div`
 `
 
 export const StoreHeaderContent = styled.div`
-  width: 90%;
-  margin: 1rem auto;
+  width: 95%;
+  margin: auto;
+  max-width: 1440px;
+  padding: 2rem 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -60,28 +62,21 @@ export const StoreHeaderContent = styled.div`
     background-color: white;
     text-align: center;
   }
-`
+`;
 
-export const HeaderStyle = styled.div`
-  width: 100%;
-  margin: 2rem auto;
-  @media (max-width: 768px) {
-    margin: 0 auto;
-  }
-`
 
 export const LogoStore = styled.img`
-  width: clamp(165px, 25%, 350px);
-  margin: 1.3rem auto;
+  width: 175px;
+  margin: auto;
 `
 
 export const ContentContainer = styled.div`
-  width: 90%;
+  width: 95%;
   max-width: 1440px;
-  margin: auto;
+  margin:auto;
   @media (max-width: 768px) {
-    margin: 10.5rem auto 0;
-    border: none;
+    margin-top: 25vh;
+    border: none
     display: grid;
     place-items: center;
   }
@@ -90,7 +85,7 @@ export const ContentContainer = styled.div`
 export const Copyright = styled.div`
   width: 100%;
   margin: auto;
-  padding: 3.5rem;
+  padding: 2rem;
   font-size: 10px;
   text-align: center;
   text-transform: uppercase;
@@ -108,7 +103,7 @@ export const StoreNavContainer = styled.div`
   }
 `;
 
-export const StoreNavButtons = styled.a`
+export const StoreNavButtons = styled(Link)`
   width: 105px;
   height: 50px;
   margin: 0;
@@ -120,6 +115,7 @@ export const StoreNavButtons = styled.a`
   background-color: black;
   border: 1px solid black;
   transition: all 0.18s linear;
+  cursor: pointer;
   &:hover {
     background-color: rgb(129, 8, 8);
     color: white;
@@ -130,14 +126,27 @@ export const StoreNavButtons = styled.a`
     border: none;
   }
 `;
-export const BacktoSiteButton = styled(StoreNavButtons)`
+export const BacktoSiteButton = styled.a`
+ width: 105px;
+  height: 50px;
+  margin: 0;
   color: black;
+  font-size: 1.2rem;
+  text-decoration: none;
+  display: grid;
+  place-items: center;
   background-color: white;
+  border: 1px solid black;
+  transition: all 0.18s linear;
+  cursor: pointer;
   &:hover {
     color: white;
     background-color: rgb(129, 8, 8);
   }
   @media (max-width: 768px) {
+    width: 100%;
+    margin: auto;
+    border: none;
     background: transparent;
     color: black;
   }
@@ -231,6 +240,14 @@ export const SearchWrapper = styled.div`
   display: flex;
   align-items: center;
   border-bottom: 1px solid rgba(0, 0, 0, 1);
+  @media (max-width: 768px) {
+    top: 14.8vh;
+    left: 0;
+    position: fixed;
+    z-index: 1;
+    background-color: white;
+    border-top: 1px solid rgba(0, 0, 0, 1);
+  }
 `;
 export const SearchInput = styled.input`
   width: 100%;
@@ -242,6 +259,9 @@ export const SearchInput = styled.input`
   &:focus {
     outline: none;
   }
+  @media (max-width: 768px) {
+    width: 95%;
+  }
 `;
 export const SearchResultContainer = styled.div`
   width: 100%;
@@ -249,58 +269,47 @@ export const SearchResultContainer = styled.div`
 `;
 /*------------------------------------------------------------Vinylist------------------------------------------------------------*/
 
-export const VinylListContainer = styled.div`
-  width: 100%;
-  margin: 1.5rem auto;
-  @media (max-width: 768px) {
-    width: 100%;
-    margin: auto;
-  }
-`;
-export const ListWrapper = styled.div`
-  width: 100%;
-  margin: auto;
-`;
+
 export const VinylList = styled.div`
-  @media (min-width: 1340px) {
+  width: 100%;
+  margin:auto;
+  display:block;
+  @media (min-width: 1140px) {
     width: 100%;
     margin: 1.5rem auto;
     display: grid;
     place-items: center;
     grid-template-columns: repeat(2, minmax(0, 100%));
-    gap: 1rem 6rem;
+    gap: 3rem 3rem;
   }
-  @media (min-width: 1640px) {
+  @media (min-width: 1439px) {
     width: 100%;
     margin: 3rem 0;
     display: grid;
     place-items: center;
     grid-template-columns: repeat(4, minmax(0, 100%));
-    gap: 5rem 4rem;
+    gap: 5rem 6.5rem;
   }
 `;
 
 /*------------------------------------------------------------VinylistItem------------------------------------------------------------*/
 
 export const VinylItem = styled.div`
-  width: 255px;
+  width: 265px;
   margin: auto;
   display: flex;
   flex-direction: column;
-  @media (min-width: 631px) and (max-width: 1639px) {
+  @media (min-width: 631px) and (max-width: 1438px) {
     width: 100%;
-    margin: 2rem auto;
+    margin: auto;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
-    gap: 3rem;
+    align-items: flex-start;
+    gap: 2rem;
   }
-  @media (max-width: 1339px) {
-    margin: 3.5rem auto;
-  }
-  @media (max-width: 630px) {
+  @media (max-width: 1139px) {
     width: 100%;
-    margin: 2.5rem auto 4.5rem;
+    margin: 2.5rem auto;
   }
   @media (min-width: 425px) and (max-width: 630px) {
     max-width: 405px;
@@ -308,39 +317,33 @@ export const VinylItem = styled.div`
 `;
 
 export const VinylCoverContainer = styled.div`
-  width: 190px;
+  width: 100%;
   margin: auto;
-`
+  box-sizing: border-box;
+  @media (min-width: 631px) and (max-width: 1438px) {
+    width: 70%;
+  }
+`;
 export const VinylCover = styled.img`
   width: 100%;
   margin: 0 auto;
   transition: all 0.18s ease-in-out;
   cursor: pointer;
   border: 1px solid white;
+  object-fit: cover;
   :hover {
     transform: scale(1.028);
-    box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.25);
+    filter:drop-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.25);
   }
-  @media (min-width: 631px) {
-    width: 220px;
-  }
-  @media (min-width: 768px) {
-    width: 275px;
-  }
-`
+`;
 
 export const VinylInfoContainer = styled.div`
-  width: 100%;
-  margin: 1rem auto 0;
-  @media (min-width: 1024px) and (max-width: 1290px) {
     width: 100%;
-    margin: auto;
+    margin: 0;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
     justify-content: space-between;
-    ;
-  }
 `
 
 export const VinylData = styled.div`
@@ -351,7 +354,6 @@ export const VinylDataTitle = styled.h1`
   font-size: 1.5rem;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
 `
 
 export const VinylDescription = styled.p`

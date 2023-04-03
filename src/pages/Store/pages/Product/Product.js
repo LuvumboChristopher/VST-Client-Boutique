@@ -22,7 +22,7 @@ import {
 import { StoreContext } from '../../../../context/StoreProvider'
 import StoreHeader from '../../components/StoreHeader'
 import { StoreFooter } from '../../components/StoreFooter'
-import { StoreContainer } from '../../style'
+import { ContentContainer, StoreContainer } from '../../style'
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -94,17 +94,17 @@ const Product = () => {
   }
 
   return (
-    <>
-      <StoreContainer>
-        <StoreHeader />
+    <StoreContainer>
+      <StoreHeader />
+      <ContentContainer>
         <ProductContentContainer>
           <ProductScreenWrapper>
             {loading ? (
-              <div style={{ textAlign: 'center' }}>
+              <div style={{ textAlign: "center" }}>
                 <p> En cours de chargement...</p>
               </div>
             ) : error ? (
-              <div style={{ textAlign: 'center' }}>
+              <div style={{ textAlign: "center" }}>
                 <p>{error}</p>
               </div>
             ) : (
@@ -127,15 +127,17 @@ const Product = () => {
                         <ProductButtonsContainer>
                           <ProductButtonsContent>
                             <ProductButtons onClick={handleAddToCart}>
-                              <BsCartPlusFill style={{ fontSize: '1.5rem' }} />
+                              <BsCartPlusFill style={{ fontSize: "1.5rem" }} />
                               Ajouter au panier
                             </ProductButtons>
-                            <ProductButtons onClick={handleAddToCartAndNavigate}>
-                              <BsFillBagFill style={{ fontSize: '1.5rem' }} />
-                              Achetez maintenant{' '}
+                            <ProductButtons
+                              onClick={handleAddToCartAndNavigate}
+                            >
+                              <BsFillBagFill style={{ fontSize: "1.5rem" }} />
+                              Achetez maintenant{" "}
                             </ProductButtons>
                             <ProductButtons>
-                              <BsFillHeartFill style={{ fontSize: '1.5rem' }} />
+                              <BsFillHeartFill style={{ fontSize: "1.5rem" }} />
                               Coups de cœur
                             </ProductButtons>
                           </ProductButtonsContent>
@@ -145,7 +147,7 @@ const Product = () => {
                         <DetailsTitle>
                           <h3>Détails du produit</h3>
                           <span
-                            style={{ cursor: 'pointer' }}
+                            style={{ cursor: "pointer" }}
                             onClick={() =>
                               setDisplay({
                                 ...display,
@@ -164,7 +166,7 @@ const Product = () => {
                         <DetailsTitle>
                           <h3>Politique de retour et de remboursement</h3>
                           <span
-                            style={{ cursor: 'pointer' }}
+                            style={{ cursor: "pointer" }}
                             onClick={() =>
                               setDisplay({
                                 ...display,
@@ -181,15 +183,16 @@ const Product = () => {
                             Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit. In iaculis blandit orci, eget feugiat lorem
                             hendrerit id. Proin pulvinar, enim eu ultricies
-                            efficitur, elit neque scelerisque ligula, ac ultrices
-                            sapien ex sit amet sapien. Nunc accumsan aliquam
-                            dignissim. Nulla eu euismod felis, quis auctor dolor.
+                            efficitur, elit neque scelerisque ligula, ac
+                            ultrices sapien ex sit amet sapien. Nunc accumsan
+                            aliquam dignissim. Nulla eu euismod felis, quis
+                            auctor dolor.
                           </Description>
                         )}
                         <DetailsTitle>
                           <h3>Info sur la livraison</h3>
                           <span
-                            style={{ cursor: 'pointer' }}
+                            style={{ cursor: "pointer" }}
                             onClick={() =>
                               setDisplay({
                                 ...display,
@@ -206,9 +209,10 @@ const Product = () => {
                             Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit. In iaculis blandit orci, eget feugiat lorem
                             hendrerit id. Proin pulvinar, enim eu ultricies
-                            efficitur, elit neque scelerisque ligula, ac ultrices
-                            sapien ex sit amet sapien. Nunc accumsan aliquam
-                            dignissim. Nulla eu euismod felis, quis auctor dolor.
+                            efficitur, elit neque scelerisque ligula, ac
+                            ultrices sapien ex sit amet sapien. Nunc accumsan
+                            aliquam dignissim. Nulla eu euismod felis, quis
+                            auctor dolor.
                           </Description>
                         )}
                       </DetailsContainer>
@@ -219,10 +223,10 @@ const Product = () => {
             )}
           </ProductScreenWrapper>
         </ProductContentContainer>
-        <StoreFooter />
-      </StoreContainer>
-    </>
-  )
+      </ContentContainer>
+      <StoreFooter />
+    </StoreContainer>
+  );
 }
 
 export default Product

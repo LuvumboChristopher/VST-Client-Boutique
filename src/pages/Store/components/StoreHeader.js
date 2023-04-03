@@ -36,67 +36,69 @@ const StoreHeader = () => {
   return (
     <StoreHeaderContainer>
       <StoreHeaderContent>
-        <Link to='/'>
-        <LogoStore src={VsLogoBlack} alt='logo' />
-      </Link>
-      <StoreNavContainer>
-        {auth.user ? (
-          <DropDown>
-            <StoreNavButtons to={''}>
-              <BsFillVinylFill style={{ margin: 'auto', fontSize: '1.3em' }} />
+        <Link to="/">
+          <LogoStore src={VsLogoBlack} alt="logo" />
+        </Link>
+        <StoreNavContainer>
+          {auth.user ? (
+            <DropDown>
+              <StoreNavButtons to={""}>
+                <BsFillVinylFill
+                  style={{ margin: "auto", fontSize: "1.3em" }}
+                />
+              </StoreNavButtons>
+              <DropDownContent>
+                <DropDownLink to={""}>
+                  <BsPersonCircle style={{ fontSize: "1.6em" }} />
+                  <p>Profil</p>
+                </DropDownLink>
+                <DropDownLink to="/historique">
+                  <BsClipboardData style={{ fontSize: "1.6em" }} />
+                  <p>Suivi des commandes</p>
+                </DropDownLink>
+                <DropDownLink to="">
+                  <BsHeartFill style={{ fontSize: "1.6em" }} />
+                  <p>Coups de cœur</p>
+                </DropDownLink>
+                <DropDownLink to={""} onClick={signoutHandler}>
+                  <BsDoorOpenFill style={{ fontSize: "1.6em" }} />
+                  <p>Déconnexion</p>
+                </DropDownLink>
+              </DropDownContent>
+            </DropDown>
+          ) : (
+            <StoreNavButtons to="/connexion">
+              <RiLoginCircleFill
+                style={{ margin: "auto", fontSize: "1.6em" }}
+              />
             </StoreNavButtons>
-            <DropDownContent>
-              <DropDownLink to={''}>
-                <BsPersonCircle style={{ fontSize: '1.6em' }} />
-                <p>Profil</p>
-              </DropDownLink>
-              <DropDownLink to='/historique'>
-                <BsClipboardData style={{ fontSize: '1.6em' }} />
-                <p>Suivi des commandes</p>
-              </DropDownLink>
-              <DropDownLink to=''>
-                <BsHeartFill style={{ fontSize: '1.6em' }} />
-                <p>Coups de cœur</p>
-              </DropDownLink>
-              <DropDownLink to={''} onClick={signoutHandler}>
-                <BsDoorOpenFill style={{ fontSize: '1.6em' }} />
-                <p>Déconnexion</p>
-              </DropDownLink>
-            </DropDownContent>
-          </DropDown>
-        ) : (
-          <StoreNavButtons
-            to='/connexion'
-          >
-            <RiLoginCircleFill style={{ margin: 'auto', fontSize: '1.6em' }} />
-          </StoreNavButtons>
-        )}
-        <BacktoSiteButton href='https://vinylstorelyon.vercel.app/' >
-          <SiHomebridge style={{ margin: 'auto', fontSize: '1.3em' }} />
-        </BacktoSiteButton>
-        <CartButton to='/panier'>
-          <CartButtonContainer
-          >
-            <IoBagSharp style={{ color: 'white', fontSize: '1.3em' }} />
-            <div>
-              {cart.cartItems.length > 0 ? (
-                <Amount>
-                  {cart.cartItems.reduce(
-                    (acc, current) => acc + current.quantity,
-                    0
-                  )}
-                </Amount>
-              ) : (
-                <Amount>0</Amount>
-              )}
-            </div>
-          </CartButtonContainer>
-        </CartButton>
-      </StoreNavContainer>
+          )}
+
+          <BacktoSiteButton href="https://vinylstorelyon.vercel.app/">
+            <SiHomebridge style={{ margin: "auto", fontSize: "1.3em" }} />
+          </BacktoSiteButton>
+
+          <CartButton to="/panier">
+            <CartButtonContainer>
+              <IoBagSharp style={{ color: "white", fontSize: "1.3em" }} />
+              <div>
+                {cart.cartItems.length > 0 ? (
+                  <Amount>
+                    {cart.cartItems.reduce(
+                      (acc, current) => acc + current.quantity,
+                      0
+                    )}
+                  </Amount>
+                ) : (
+                  <Amount>0</Amount>
+                )}
+              </div>
+            </CartButtonContainer>
+          </CartButton>
+        </StoreNavContainer>
       </StoreHeaderContent>
-     
     </StoreHeaderContainer>
-  )
+  );
 }
 
 export default StoreHeader
