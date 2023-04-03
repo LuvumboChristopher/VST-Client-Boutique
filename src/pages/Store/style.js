@@ -108,7 +108,7 @@ export const StoreNavContainer = styled.div`
   }
 `;
 
-export const StoreNavButtons = styled(Link)`
+export const StoreNavButtons = styled.a`
   width: 105px;
   height: 50px;
   margin: 0;
