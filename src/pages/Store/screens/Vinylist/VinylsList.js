@@ -18,7 +18,7 @@ const reducer = (state, action) => {
 }
 const VinylsList = ({ search, handleAddToCart }) => {
   const [{ loading, error, products }, dispatch] = useReducer(reducer, {
-    products: '',
+    products: [],
     loading: true,
     error: '',
   })
@@ -28,8 +28,9 @@ const VinylsList = ({ search, handleAddToCart }) => {
       dispatch({ type: 'FETCH_REQUEST' })
       try {
         const url = '/api/v1/products'
-        const { data } = await axios.get(url)
-        dispatch({ type: 'FETCH_SUCCESS', payload: data })
+        axios.get(url).then((res) => {
+          dispatch({ type: "FETCH_SUCCESS", payload: res.data });
+        });
       } catch (err) {
         const error = 'Erreur de serveur, réessayez plus tard'
         dispatch({ type: 'FETCH_FAIL', payload: error })
@@ -51,7 +52,7 @@ const VinylsList = ({ search, handleAddToCart }) => {
           </SearchResultContainer>
         ) : (
           <VinylList>
-            {products.data.map((vinyl) => {
+            {products.map((vinyl) => {
               return (
                 <Vinyl
                   key={vinyl._id}
