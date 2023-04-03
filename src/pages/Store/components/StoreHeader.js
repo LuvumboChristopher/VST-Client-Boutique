@@ -25,7 +25,7 @@ const StoreHeader = () => {
         withCredentials: true,
       })
       logout()
-      navigate('/store')
+      navigate('/')
       const refresh = () => window.location.reload(false)
       refresh()
     } catch (err) {
