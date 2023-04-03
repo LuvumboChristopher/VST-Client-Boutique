@@ -1,39 +1,25 @@
-import React, { useEffect, useReducer } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Vinyl } from './Vinyl'
 import axios from 'axios'
 
 import { VinylListContainer, ListWrapper, VinylList, SearchResultContainer } from '../../style.js'
 
-const reducer = (state, action) => {
-  switch (action.type) {
-    case 'FETCH_REQUEST':
-      return { ...state, loading: true }
-    case 'FETCH_SUCCESS':
-      return { ...state, products: action.payload, loading: false }
-    case 'FETCH_FAIL':
-      return { ...state, error: action.payload, loading: false }
-    default:
-      return state
-  }
-}
-
 const VinylsList = ({ search, handleAddToCart }) => {
-  const [{ loading, error, products }, dispatch] = useReducer(reducer, {
-    products: [],
-    loading: true,
-    error: '',
-  })
+
+  const [products , setProducts] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error , setError] = useState('');
 
   useEffect(() => {
     const fecthproducts = async () => {
-      dispatch({ type: 'FETCH_REQUEST' })
       try {
         const url = '/api/v1/products'
         const { data } = await axios.get(url)
-        dispatch({ type: 'FETCH_SUCCESS', payload: data })
+        setProducts(data);
+        setIsLoading(false)
       } catch (err) {
-        const error = 'Erreur de serveur, réessayez plus tard'
-        dispatch({ type: 'FETCH_FAIL', payload: error })
+        setError('Erreur de serveur, réessayez plus tard')
+        setIsLoading(false);
       }
     }
     fecthproducts()
@@ -42,31 +28,30 @@ const VinylsList = ({ search, handleAddToCart }) => {
   return (
     <>
       <>
-        {loading ? (
+        {isLoading ? (
           <SearchResultContainer>
-            <p style={{ margin: '1.5rem auto'}}> En cours de chargement...</p>
+            <p style={{ margin: "1.5rem auto" }}> En cours de chargement...</p>
           </SearchResultContainer>
         ) : error ? (
           <SearchResultContainer>
-            <p style={{ margin: '1.5rem auto'}}>{error}</p>
+            <p style={{ margin: "1.5rem auto" }}>{error}</p>
           </SearchResultContainer>
-        ) :(
+        ) : (
           <VinylList>
             {products.map((vinyl) => {
-                return (
-                  <Vinyl
-                    key={vinyl._id}
-                    {...vinyl}
-                    handleAddToCart={handleAddToCart}
-                  ></Vinyl>
-                )
-              })
-            }
+              return (
+                <Vinyl
+                  key={vinyl._id}
+                  {...vinyl}
+                  handleAddToCart={handleAddToCart}
+                ></Vinyl>
+              );
+            })}
           </VinylList>
         )}
       </>
     </>
-  )
+  );
 }
 
 export default VinylsList 
