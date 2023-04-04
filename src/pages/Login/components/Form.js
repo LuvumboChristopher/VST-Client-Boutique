@@ -49,7 +49,7 @@ const Form = () => {
           withCredentials: true
         }
       )
-      navigate(redirect || '/store')
+      navigate(redirect || '/')
     } catch (err) {
       console.error(err)
       setErrors(err.response.data.error)

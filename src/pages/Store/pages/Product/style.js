@@ -1,12 +1,13 @@
 import styled from 'styled-components'
 
 export const ProductContentContainer = styled.div`
-  width: 100%;
+  width: 95%;
   margin: auto;
   @media (max-width: 769px) {
-    margin: 1rem auto 0;
+    margin: 12rem auto 0;
+    max-width: 600px;
   }
-`
+`;
 
 export const ProductScreenWrapper = styled.div`
   width: 100%;
@@ -14,7 +15,7 @@ export const ProductScreenWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: start;
-  gap: 4rem;
+  gap: 3rem;
   @media (max-width: 768px) {
     padding: 0;
     margin: auto;
@@ -67,7 +68,6 @@ export const ProductVinylCoverContainer = styled.div`
 export const ProductVinylCover = styled.img`
   width: 100%;
   margin: auto;
-  max-width: 430px;
   box-shadow: 2px 3px 23px -3px rgba(0, 0, 0, 0.25);
   transition: transform 100ms ease-in-out;
   cursor: zoom-in;

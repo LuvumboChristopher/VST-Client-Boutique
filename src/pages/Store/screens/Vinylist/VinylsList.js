@@ -39,16 +39,6 @@ const VinylsList = ({ search, handleAddToCart }) => {
     fecthproducts()
   }, [])
 
-  const vinyl= products.map((vinyl) => {
-    return (
-      <Vinyl
-        key={vinyl._id}
-        {...vinyl}
-        handleAddToCart={handleAddToCart}
-      ></Vinyl>
-    );
-  });
-
   return (
     <>
       <>
@@ -60,8 +50,28 @@ const VinylsList = ({ search, handleAddToCart }) => {
           <SearchResultContainer>
             <p style={{ margin: "1.5rem auto" }}>{error}</p>
           </SearchResultContainer>
+        ) : products ? (
+          <VinylList>
+            {search(products).length === 0 ? (
+              <SearchResultContainer>
+                <p>Pas de resultats pour votre recherche</p>
+              </SearchResultContainer>
+            ) : (
+              search(products).map((vinyl) => {
+                return (
+                  <Vinyl
+                    key={vinyl._id}
+                    {...vinyl}
+                    handleAddToCart={handleAddToCart}
+                  ></Vinyl>
+                );
+              })
+            )}
+          </VinylList>
         ) : (
-          <VinylList>{vinyl}</VinylList>
+          <SearchResultContainer>
+            <p>Pas de resultats pour votre recherche...</p>
+          </SearchResultContainer>
         )}
       </>
     </>

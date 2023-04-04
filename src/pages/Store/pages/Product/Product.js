@@ -96,7 +96,6 @@ const Product = () => {
   return (
     <StoreContainer>
       <StoreHeader />
-      <ContentContainer>
         <ProductContentContainer>
           <ProductScreenWrapper>
             {loading ? (
@@ -222,8 +221,7 @@ const Product = () => {
               )
             )}
           </ProductScreenWrapper>
-        </ProductContentContainer>
-      </ContentContainer>
+        </ProductContentContainer>  
       <StoreFooter />
     </StoreContainer>
   );

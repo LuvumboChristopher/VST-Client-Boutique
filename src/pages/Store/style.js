@@ -49,33 +49,35 @@ export const StoreHeaderContainer = styled.div`
 export const StoreHeaderContent = styled.div`
   width: 95%;
   margin: auto;
+  padding: 0.8rem 0;
   max-width: 1440px;
-  padding: 2rem 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   @media (max-width: 768px) {
     width: 100%;
-    margin: 0 auto;
+    margin: auto;
+    padding: 0;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     background-color: white;
     text-align: center;
+
   }
 `;
 
-
 export const LogoStore = styled.img`
-  width: 175px;
-  margin: auto;
-`
+  width: 180px;
+  margin: 1.5rem auto;
+`;
 
 export const ContentContainer = styled.div`
   width: 95%;
   max-width: 1440px;
   margin:auto;
   @media (max-width: 768px) {
-    margin-top: 25vh;
+    margin-top: 17vh;
     border: none
     display: grid;
     place-items: center;
@@ -83,9 +85,9 @@ export const ContentContainer = styled.div`
 `;
 
 export const Copyright = styled.div`
-  width: 100%;
+  width: 95%;
   margin: auto;
-  padding: 2rem;
+  padding: 2rem 0;
   font-size: 10px;
   text-align: center;
   text-transform: uppercase;
@@ -126,6 +128,7 @@ export const StoreNavButtons = styled(Link)`
     border: none;
   }
 `;
+
 export const BacktoSiteButton = styled.a`
  width: 105px;
   height: 50px;
@@ -240,13 +243,8 @@ export const SearchWrapper = styled.div`
   display: flex;
   align-items: center;
   border-bottom: 1px solid rgba(0, 0, 0, 1);
-  @media (max-width: 768px) {
-    top: 14.8vh;
-    left: 0;
-    position: fixed;
-    z-index: 1;
-    background-color: white;
-    border-top: 1px solid rgba(0, 0, 0, 1);
+  @media (max-width: 631px) {
+    width: 95%;
   }
 `;
 export const SearchInput = styled.input`
@@ -259,7 +257,7 @@ export const SearchInput = styled.input`
   &:focus {
     outline: none;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 631px) {
     width: 95%;
   }
 `;
@@ -270,46 +268,43 @@ export const SearchResultContainer = styled.div`
 /*------------------------------------------------------------Vinylist------------------------------------------------------------*/
 
 
+
 export const VinylList = styled.div`
-  width: 100%;
-  margin:auto;
-  display:block;
   @media (min-width: 1140px) {
     width: 100%;
-    margin: 1.5rem auto;
+    margin: auto;
     display: grid;
     place-items: center;
     grid-template-columns: repeat(2, minmax(0, 100%));
-    gap: 3rem 3rem;
+    gap: 0.5rem 3rem;
   }
   @media (min-width: 1439px) {
     width: 100%;
-    margin: 3rem 0;
+    margin: 0 auto 2rem;
     display: grid;
     place-items: center;
     grid-template-columns: repeat(4, minmax(0, 100%));
-    gap: 5rem 6.5rem;
+    gap: 3rem 4rem;
   }
 `;
 
 /*------------------------------------------------------------VinylistItem------------------------------------------------------------*/
 
 export const VinylItem = styled.div`
-  width: 265px;
-  margin: auto;
+  width: 285px;
+  margin: 2rem auto;
   display: flex;
   flex-direction: column;
   @media (min-width: 631px) and (max-width: 1438px) {
     width: 100%;
-    margin: auto;
+    margin: 2rem auto;
     flex-direction: row;
     justify-content: center;
-    align-items: flex-start;
     gap: 2rem;
   }
   @media (max-width: 1139px) {
     width: 100%;
-    margin: 2.5rem auto;
+    margin: 3rem auto;
   }
   @media (min-width: 425px) and (max-width: 630px) {
     max-width: 405px;
@@ -319,15 +314,14 @@ export const VinylItem = styled.div`
 export const VinylCoverContainer = styled.div`
   width: 100%;
   margin: auto;
-  box-sizing: border-box;
   @media (min-width: 631px) and (max-width: 1438px) {
-    width: 70%;
+    width: 400px;
   }
 `;
 export const VinylCover = styled.img`
   width: 100%;
-  margin: 0 auto;
-  transition: all 0.18s ease-in-out;
+  margin: auto;
+  transition: all 0.19s ease-in-out;
   cursor: pointer;
   border: 1px solid white;
   object-fit: cover;
@@ -338,13 +332,13 @@ export const VinylCover = styled.img`
 `;
 
 export const VinylInfoContainer = styled.div`
-    width: 100%;
-    margin: 0;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    justify-content: space-between;
-`
+  width: 100%;
+  margin: auto;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  justify-content: space-between;
+`;
 
 export const VinylData = styled.div`
   width: 100%;

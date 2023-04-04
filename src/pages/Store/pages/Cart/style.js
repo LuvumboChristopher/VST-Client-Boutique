@@ -1,9 +1,8 @@
 import styled from 'styled-components'
 
 export const CartContentContainer = styled.div`
-  width: 90%;
-  max-width: 425px;
-  margin: 11rem auto 0;
+  width: 95%;
+  margin: 10rem auto 0;
   flex-direction: column;
   border: none;
   @media (min-width: 631px) {
@@ -12,7 +11,6 @@ export const CartContentContainer = styled.div`
   @media (min-width: 769px) {
     display: flex;
     border: 1px solid black;
-    width: 90%;
     max-width: none;
     margin: auto;
   }
@@ -95,8 +93,8 @@ export const CartItemWrapper = styled.div`
     border-bottom: none;
   }
   @media (max-width: 768px) {
-    width: 90%;
-    margin: 1rem auto 2rem;
+    width: 100%;
+    margin: 2rem auto;
   }
 `
 
@@ -113,7 +111,7 @@ export const VinylWrapper = styled.div`
   @media (min-width: 1441px) {
     flex-direction: row;
     gap: 3rem;
-    padding: 3rem;
+    padding: 2rem;
   }
 `
 
