@@ -96,7 +96,7 @@ const Product = () => {
   return (
     <StoreContainer>
       <StoreHeader/>
-        <ProductContentContainer>
+      <ProductContentContainer>
           <ProductScreenWrapper>
             {loading ? (
               <div style={{ textAlign: "center" }}>
@@ -221,7 +221,7 @@ const Product = () => {
               )
             )}
           </ProductScreenWrapper>
-        </ProductContentContainer>  
+      </ProductContentContainer>  
       <StoreFooter />
     </StoreContainer>
   );
