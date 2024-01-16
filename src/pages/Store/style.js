@@ -47,9 +47,9 @@ export const StoreHeaderContainer = styled.div`
 `
 
 export const StoreHeaderContent = styled.div`
-  width: 95%;
+  width: 90%;
   margin: auto;
-  padding: 0.8rem 0;
+  padding: 0.5rem 0;
   max-width: 1440px;
   display: flex;
   justify-content: space-between;
@@ -68,16 +68,16 @@ export const StoreHeaderContent = styled.div`
 `;
 
 export const LogoStore = styled.img`
-  width: 180px;
+  width: 170px;
   margin: 1.5rem auto;
 `;
 
 export const ContentContainer = styled.div`
-  width: 95%;
+  width: 90%;
   max-width: 1440px;
   margin:auto;
   @media (max-width: 768px) {
-    margin-top: 17vh;
+    margin-top: 22vh;
     border: none
     display: grid;
     place-items: center;
@@ -106,8 +106,8 @@ export const StoreNavContainer = styled.div`
 `;
 
 export const StoreNavButtons = styled(Link)`
-  width: 105px;
-  height: 50px;
+  width: 90px;
+  height: 45px;
   margin: 0;
   color: white;
   font-size: 1.2rem;
@@ -130,8 +130,8 @@ export const StoreNavButtons = styled(Link)`
 `;
 
 export const BacktoSiteButton = styled.a`
- width: 105px;
-  height: 50px;
+ width: 90px;
+  height: 45px;
   margin: 0;
   color: black;
   font-size: 1.2rem;
@@ -164,8 +164,8 @@ export const Amount = styled.span`
   display: grid;
   place-items: center;
   bottom: 20px;
-  left: 30px;
-  font-size: 0.8em;
+  left: 40px;
+  font-size: 0.7em;
 `;
 
 export const CartButton = styled(StoreNavButtons)`
@@ -262,8 +262,8 @@ export const SearchInput = styled.input`
   }
 `;
 export const SearchResultContainer = styled.div`
-  width: 100%;
-  margin: 1rem auto;
+  width: 95%;
+  margin: 2rem auto;
 `;
 /*------------------------------------------------------------Vinylist------------------------------------------------------------*/
 
@@ -276,7 +276,7 @@ export const VinylList = styled.div`
     display: grid;
     place-items: center;
     grid-template-columns: repeat(2, minmax(0, 100%));
-    gap: 0.5rem 3rem;
+    gap: 0rem 3rem;
   }
   @media (min-width: 1439px) {
     width: 100%;
@@ -284,14 +284,14 @@ export const VinylList = styled.div`
     display: grid;
     place-items: center;
     grid-template-columns: repeat(4, minmax(0, 100%));
-    gap: 3rem 4rem;
+    gap: 1rem 3rem;
   }
 `;
 
 /*------------------------------------------------------------VinylistItem------------------------------------------------------------*/
 
 export const VinylItem = styled.div`
-  width: 285px;
+  width: 250px;
   margin: 2rem auto;
   display: flex;
   flex-direction: column;
@@ -368,10 +368,10 @@ export const VinylPurchase = styled.div`
 export const VinylPurchaseButton = styled.button`
   display: inline-flex;
   align-items: center;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.8rem;
   background: ${(props) => (props.voir ? 'black' : 'transparent')};
   border: 1px solid black;
-  font-size: 0.7rem;
+  font-size: 0.6rem;
   font-family: var(--font-family-text);
   text-transform: uppercase;
   color: ${(props) => (props.voir ? 'white' : 'black')};

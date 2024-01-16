@@ -44,11 +44,11 @@ const VinylsList = ({ search, handleAddToCart }) => {
       <>
         {loading ? (
           <SearchResultContainer>
-            <p style={{ margin: "1.5rem auto" }}> En cours de chargement...</p>
+            <p style={{ margin: "2rem auto" }}> En cours de chargement...</p>
           </SearchResultContainer>
         ) : error ? (
           <SearchResultContainer>
-            <p style={{ margin: "1.5rem auto" }}>{error}</p>
+            <p style={{ margin: "2rem auto" }}>{error}</p>
           </SearchResultContainer>
         ) : products ? (
           <VinylList>

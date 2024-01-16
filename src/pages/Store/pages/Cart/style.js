@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const CartContentContainer = styled.div`
-  width: 95%;
+  width: 90%;
   margin: 10rem auto 0;
   flex-direction: column;
   border: none;
@@ -42,7 +42,7 @@ export const UnderLine = styled.div`
 export const Totalwrapper = styled.div`
   width: 100%;
   margin: 0 auto;
-  flex: 0.9;
+  flex: 0.725;
   @media (min-width: 1280px) {
     border-left: 1px solid black;
   }
@@ -53,7 +53,7 @@ export const TotalToPay = styled.div`
   justify-content: space-between;
   margin: auto;
   padding: 1.5rem;
-  font-size: 0.75rem;
+  font-size: 0.65rem;
 `
 export const ItemResume = styled.div`
   width: 100%;
@@ -67,6 +67,7 @@ export const PaimentButton = styled.button`
   width: 100%;
   margin: 0;
   padding: 2.5rem;
+  font-size: 10px;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -185,6 +186,7 @@ export const DeleteButton = styled.button`
   padding: 1rem 2rem;
   border: 1px solid rgba(0, 0, 0, 0.555);
   border-radius: 2px;
+  font-size: 10px;
   text-align: center;
   text-transform: uppercase;
   color: white;
@@ -200,7 +202,7 @@ export const DeleteButton = styled.button`
     width: 160px;
     margin: 0;
   }
-`
+`;
 
 export const VinylInfoContainer = styled.div`
   width: 100%;
@@ -208,7 +210,7 @@ export const VinylInfoContainer = styled.div`
 `
 
 export const VinylInfoText = styled.p`
-  font-size: 0.8rem;
+  font-size: 0.70rem;
   text-align: justify;
 `
 
@@ -228,6 +230,6 @@ export const CartVinylCover = styled.img`
   margin: auto;
   cursor: pointer;
   @media (min-width: 631px) {
-    width: 225px;
+    width: 200px;
   }
 `

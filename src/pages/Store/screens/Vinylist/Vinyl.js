@@ -56,8 +56,8 @@ const Vinyl = (vinyl) => {
             <h5>{year}</h5>
           </div>
           <VinylInfoText>
-            {description.slice(0, 220)}
-            {description.length > 220 && "..."}
+            {description.slice(0, 190)}
+            {description.length > 190 && "..."}
           </VinylInfoText>
         </div>
         <VinylPurchase>
