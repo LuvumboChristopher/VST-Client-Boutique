@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { StoreContext } from '../../../../context/StoreProvider'
 import useAuth from '../../../../hooks/useAuth'
 import { StoreFooter } from '../../components/StoreFooter'
-import StoreHeader from '../../components/StoreHeader'
+import {StoreHeader} from '../../components/StoreHeader'
 import { ContentContainer } from '../../style'
 import { ExpeditionForm, ExpeditionFormButton, ExpeditionFormInput, ExpeditionHeader } from './style'
 

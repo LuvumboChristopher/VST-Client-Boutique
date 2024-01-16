@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import { TopButtonContainer, TopButtonIcon } from '../style'
 
-const ScrollToTop = () => {
+export const ScrollToTop = () => {
     const [showTopBtn, setShowTopBtn] = useState(false);
 
     useEffect(() => {
@@ -29,4 +29,3 @@ const ScrollToTop = () => {
     );
 };
 
-export default ScrollToTop;

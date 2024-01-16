@@ -59,7 +59,7 @@ export const ProductVinylCoverContainer = styled.div`
   margin: 0 auto 10px;
   display: grid;
   place-items: center;
-  flex: 1.10;
+  flex: 1.1;
   @media (max-width: 1380px) {
     flex: 1.6;
   }

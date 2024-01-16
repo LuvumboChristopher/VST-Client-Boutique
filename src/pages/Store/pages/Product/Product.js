@@ -20,7 +20,7 @@ import {
   ProductVinylCoverContainer,
 } from './style'
 import { StoreContext } from '../../../../context/StoreProvider'
-import StoreHeader from '../../components/StoreHeader'
+import {StoreHeader} from '../../components/StoreHeader'
 import { StoreFooter } from '../../components/StoreFooter'
 import { StoreContainer } from '../../style'
 

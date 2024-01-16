@@ -3,7 +3,7 @@ import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import useAuth from '../../../../hooks/useAuth'
 import { ContentContainer, StoreContainer } from '../../style'
-import StoreHeader from '../../components/StoreHeader'
+import {StoreHeader} from '../../components/StoreHeader'
 import { ProductScreenWrapper } from '../Product/style'
 import { StoreFooter } from '../../components/StoreFooter'
 

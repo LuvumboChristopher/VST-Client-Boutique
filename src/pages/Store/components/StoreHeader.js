@@ -13,7 +13,7 @@ import Axios from 'axios'
 import useAuth from '../../../hooks/useAuth'
 import { Amount, BacktoSiteButton, CartButton, CartButtonContainer, DropDown, DropDownContent, DropDownLink, LogoStore, StoreHeaderContainer, StoreHeaderContent, StoreNavButtons, StoreNavContainer } from '../style'
 
-const StoreHeader = () => {
+export const StoreHeader = () => {
   const { auth, logout } = useAuth()
   const { state } = useContext(StoreContext)
   const { cart } = state
@@ -101,4 +101,3 @@ const StoreHeader = () => {
   );
 }
 
-export default StoreHeader

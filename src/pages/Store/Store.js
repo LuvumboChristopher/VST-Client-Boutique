@@ -3,7 +3,7 @@ import VinylsList from './screens/Vinylist/VinylsList'
 import { ContentContainer, StoreContainer } from './style.js'
 import { Search } from './screens/Search/Search'
 import { StoreFooter } from './components/StoreFooter'
-import StoreHeader from './components/StoreHeader'
+import { StoreHeader } from './components/StoreHeader'
 
 const Store = () => {
   const [searchTerm, setSerchTerm] = useState('')

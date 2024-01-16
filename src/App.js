@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import './css/style.css'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import useAuth from './hooks/useAuth'
-import ScrollToTop from './pages/Store/components/ScrollToTop'
+import {ScrollToTop} from './pages/Store/components/ScrollToTop'
 
 import Singup from './pages/Signup/Singup'
 import Login from './pages/Login/Login'

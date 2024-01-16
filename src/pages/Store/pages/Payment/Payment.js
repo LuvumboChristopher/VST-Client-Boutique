@@ -4,7 +4,7 @@ import { StoreContext } from '../../../../context/StoreProvider'
 import useAuth from '../../../../hooks/useAuth'
 
 import { ContentContainer } from '../../style'
-import StoreHeader from '../../components/StoreHeader'
+import {StoreHeader} from '../../components/StoreHeader'
 import { StoreFooter } from '../../components/StoreFooter'
 
 import {
