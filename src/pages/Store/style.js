@@ -49,7 +49,7 @@ export const StoreHeaderContainer = styled.div`
 export const StoreHeaderContent = styled.div`
   width: 90%;
   margin: auto;
-  padding: 0.5rem 0;
+  padding: 1rem 0;
   max-width: 1440px;
   display: flex;
   justify-content: space-between;
@@ -68,7 +68,7 @@ export const StoreHeaderContent = styled.div`
 `;
 
 export const LogoStore = styled.img`
-  width: 170px;
+  width: 175px;
   margin: 1.5rem auto;
 `;
 
@@ -291,7 +291,7 @@ export const VinylList = styled.div`
 /*------------------------------------------------------------VinylistItem------------------------------------------------------------*/
 
 export const VinylItem = styled.div`
-  width: 250px;
+  width: 275px;
   margin: 2rem auto;
   display: flex;
   flex-direction: column;

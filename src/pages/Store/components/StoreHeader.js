@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import VsLogoBlack from '../../../assets/img/vslogoblack.png'
+import VsLogoBlack from '../../../assets/img/vs_logoblack.png'
 import { IoBagSharp } from 'react-icons/io5'
 import { RiLoginCircleFill } from 'react-icons/ri'
 import { BsClipboardData, BsHeartFill } from 'react-icons/bs'

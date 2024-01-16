@@ -22,7 +22,7 @@ import {
 import { StoreContext } from '../../../../context/StoreProvider'
 import StoreHeader from '../../components/StoreHeader'
 import { StoreFooter } from '../../components/StoreFooter'
-import { ContentContainer, StoreContainer } from '../../style'
+import { StoreContainer } from '../../style'
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -95,7 +95,7 @@ const Product = () => {
 
   return (
     <StoreContainer>
-      <StoreHeader />
+      <StoreHeader/>
         <ProductContentContainer>
           <ProductScreenWrapper>
             {loading ? (
