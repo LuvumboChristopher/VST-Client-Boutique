@@ -35,7 +35,7 @@ function App() {
         <Route path='/inscription' element={<Singup />} />
         <Route path='/connexion' element={<Login />} />
         <Route path='/panier' element={<Cart />} />
-        <Route path='/products' element={<Product />} />
+        <Route path='/products/:id' element={<Product />} />
 
         <Route
           path='/expedition'
