@@ -37,7 +37,7 @@ export const StoreHeader = () => {
     <StoreHeaderContainer>
       <StoreHeaderContent>
         <Link to="/">
-          <LogoStore src={vslogo} alt="logo" />
+          <LogoStore src={'../../../assets/img/vs_logoblack.png'} alt="logo" />
         </Link>
         <StoreNavContainer>
           {auth.user ? (
