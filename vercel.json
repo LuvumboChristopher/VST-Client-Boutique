@@ -1,8 +1,0 @@
-{
-  "routes": [
-    {
-      "src": "/assets/img/(.*)",
-      "dest": "/public/assets/img/$1"
-    }
-  ]
-}
