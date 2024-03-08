@@ -11,7 +11,7 @@ import { StoreContext } from '../../../context/StoreProvider'
 import Axios from 'axios'
 import useAuth from '../../../hooks/useAuth'
 import { Amount, BacktoSiteButton, CartButton, CartButtonContainer, DropDown, DropDownContent, DropDownLink, LogoStore, StoreHeaderContainer, StoreHeaderContent, StoreNavButtons, StoreNavContainer } from '../style'
-const vslogo = require("../../../assets/img/vs_logoblack.png");
+const vslogo = require("../../assets/img/vs_logoblack.png");
 
 export const StoreHeader = () => {
   const { auth, logout } = useAuth()
@@ -37,7 +37,7 @@ export const StoreHeader = () => {
     <StoreHeaderContainer>
       <StoreHeaderContent>
         <Link to="/">
-          <LogoStore src={`${process.env.PUBLIC_URL}/src/assets/img/vs_logoblack.png`} alt="logo" />
+          <LogoStore src={vslogo} alt="logo" />
         </Link>
         <StoreNavContainer>
           {auth.user ? (
