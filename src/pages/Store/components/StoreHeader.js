@@ -37,7 +37,7 @@ export const StoreHeader = () => {
     <StoreHeaderContainer>
       <StoreHeaderContent>
         <Link to="/">
-          <LogoStore src={'../../../assets/img/vs_logoblack.png'} alt="logo" />
+          <LogoStore src={`${process.env.PUBLIC_URL}/assets/img/vs_logoblack.png`} alt="logo" />
         </Link>
         <StoreNavContainer>
           {auth.user ? (
