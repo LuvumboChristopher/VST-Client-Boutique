@@ -1,8 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
-import SinginVideo from '../../assets/video/video.mp4'
-import Vslogo from '../../assets/img/vs_logo.png'
 
 import {
   LoginVideoContainer,
@@ -14,7 +12,11 @@ import {
   LoginContainer,
   LoginContentContainer,
 } from './style'
+
 import Form from './components/Form'
+
+const SinginVideo = '/assets/video/video.mp4'
+const Vslogo = '/assets/img/vs_logo.png'
 
 const Login = () => {
   return (

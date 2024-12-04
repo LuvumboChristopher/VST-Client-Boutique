@@ -11,17 +11,17 @@
 
 @font-face {
   font-family: 'QuintalScript_Regular';
-  src: url('../assets/fonts/QuintalScript_Regular.otf');
+  src: url('../../public/assets/fonts/QuintalScript_Regular.otf');
 }
 
 @font-face {
   font-family: 'TitilliumWeb-Regular';
-  src: url('../assets/fonts/TitilliumWeb-Regular.ttf');
+  src: url('../../public/assets/fonts/TitilliumWeb-Regular.ttf');
 }
 
 @font-face {
   font-family: 'Theprestigesignature';
-  src: url('../assets/fonts/Theprestigesignature.otf');
+  src: url('../../public/assets/fonts/Theprestigesignature.otf');
 }
 
 :root {

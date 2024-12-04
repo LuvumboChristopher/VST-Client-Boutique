@@ -1,31 +1,92 @@
-import React, { useEffect } from 'react'
-import './css/style.css'
-import { Routes, Route, useLocation } from 'react-router-dom'
-import useAuth from './hooks/useAuth'
-import {ScrollToTop} from './pages/Store/components/ScrollToTop'
+import React, { useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import './css/style.css';
+import useAuth from './hooks/useAuth';
+import { ScrollToTop } from './pages/Store/components/ScrollToTop';
 
-import Singup from './pages/Signup/Singup'
-import Login from './pages/Login/Login'
-import Store from './pages/Store/Store'
-import Cart from './pages/Store/pages/Cart/Cart'
-import Product from './pages/Store/pages/Product/Product'
-import Shipping from './pages/Store/pages/Shipping/Shipping'
-import RequireAuth from './utils/RequireAuth'
-import Payment from './pages/Store/pages/Payment/Payment'
-import Order from './pages/Store/pages/Order/Order'
-import Commande from './pages/Store/pages/Commande/Commande'
-import UserProfile from './pages/Store/pages/UserProfile/UserProfile'
-import Historique  from './pages/Store/pages/Historique/Historique'
+import Singup from './pages/Signup/Singup';
+import Login from './pages/Login/Login';
+import Store from './pages/Store/Store';
+import Cart from './pages/Store/pages/Cart/Cart';
+import Product from './pages/Store/pages/Product/Product';
+import Shipping from './pages/Store/pages/Shipping/Shipping';
+import RequireAuth from './utils/RequireAuth';
+import Payment from './pages/Store/pages/Payment/Payment';
+import Order from './pages/Store/pages/Order/Order';
+import Commande from './pages/Store/pages/Commande/Commande';
+import UserProfile from './pages/Store/pages/UserProfile/UserProfile';
+import Historique from './pages/Store/pages/Historique/Historique';
+
+const routeMetadata = {
+  '/': {
+    title: 'Boutique | VinylstoreLyon - Bienvenue a la maison du vinyle',
+    description: 'Découvrez notre collection exclusive de vinyles et trouvez votre prochaine pépite musicale.',
+  },
+  '/inscription': {
+    title: 'Inscription | VinylstoreLyon - Bienvenue a la maison du vinyle',
+    description: 'Créez un compte pour accéder à nos offres spéciales et personnaliser votre expérience musicale.',
+  },
+  '/connexion': {
+    title: 'Connexion | VinylstoreLyon - Bienvenue a la maison du vinyle',
+    description: 'Connectez-vous pour accéder à votre collection personnelle et gérer vos commandes.',
+  },
+  '/panier': {
+    title: 'Panier | VinylstoreLyon - Bienvenue a la maison du vinyle',
+    description: 'Consultez et gérez les vinyles que vous avez ajoutés à votre panier.',
+  },
+  '/products/:id': {
+    title: 'Détails du produit | VinylstoreLyon - Bienvenue a la maison du vinyle',
+    description: 'Découvrez les détails de ce vinyle et ajoutez-le à votre collection.',
+  },
+  '/expedition': {
+    title: 'Expédition | VinylstoreLyon - Bienvenue a la maison du vinyle',
+    description: 'Choisissez vos options de livraison pour recevoir vos vinyles rapidement et en toute sécurité.',
+  },
+  '/paiement': {
+    title: 'Paiement | VinylstoreLyon - Bienvenue a la maison du vinyle',
+    description: 'Saisissez vos informations de paiement en toute sécurité pour finaliser votre commande.',
+  },
+  '/commander': {
+    title: 'Confirmation de commande | VinylstoreLyon - Bienvenue a la maison du vinyle',
+    description: 'Confirmez les détails de votre commande avant de la valider.',
+  },
+  '/commande/:id': {
+    title: 'Commande | VinylstoreLyon - Bienvenue a la maison du vinyle',
+    description: 'Consultez les détails de votre commande et suivez son statut.',
+  },
+  '/profil': {
+    title: 'Profil utilisateur | VinylstoreLyon - Bienvenue a la maison du vinyle',
+    description: 'Gérez vos informations personnelles et vos préférences musicales.',
+  },
+  '/historique': {
+    title: 'Historique des commandes | VinylstoreLyon - Bienvenue a la maison du vinyle',
+    description: 'Consultez l’historique de vos achats et revivez vos moments musicaux.',
+  },
+};
 
 
 function App() {
-
-  const { auth, checkUser } = useAuth()
-  const location = useLocation()
+  const { auth, checkUser } = useAuth();
+  const location = useLocation();
 
   useEffect(() => {
-    checkUser()
-  }, [checkUser, auth.user, location])
+    checkUser();
+
+    const metadata = routeMetadata[location.pathname] || {
+      title: 'VinylstoreLyon - Bienvenue a la maison du vinyle',
+      description: 'Explorez le monde de la musique avec VinylstoreLyon.',
+    };
+    document.title = metadata.title;
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', metadata.description);
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = 'description';
+      meta.content = metadata.description;
+      document.head.appendChild(meta);
+    }
+  }, [checkUser, auth.user, location]);
 
   return (
     <>
@@ -36,7 +97,6 @@ function App() {
         <Route path='/connexion' element={<Login />} />
         <Route path='/panier' element={<Cart />} />
         <Route path='/products/:id' element={<Product />} />
-
         <Route
           path='/expedition'
           element={
@@ -62,14 +122,6 @@ function App() {
           }
         />
         <Route
-          path='/commande/:id'
-          element={
-            <RequireAuth>
-              <Commande />
-            </RequireAuth>
-          }
-        />
-        <Route
           path='/profil'
           element={
             <RequireAuth>
@@ -87,7 +139,7 @@ function App() {
         />
       </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

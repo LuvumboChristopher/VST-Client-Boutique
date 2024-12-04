@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-import SingupFond from '../../assets/img/singup_fond.png'
+const SingupFond = '/assets/img/singup_fond.png'
 
 export const SingupContainer = styled.div`
   width: 100%;
