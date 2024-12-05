@@ -19,47 +19,47 @@ import Historique from './pages/Store/pages/Historique/Historique';
 
 const routeMetadata = {
   '/': {
-    title: 'Boutique | VinylstoreLyon - Bienvenue a la maison du vinyle',
+    title: 'Boutique - Bienvenue a la maison du vinyle',
     description: 'Découvrez notre collection exclusive de vinyles et trouvez votre prochaine pépite musicale.',
   },
   '/inscription': {
-    title: 'Inscription | VinylstoreLyon - Bienvenue a la maison du vinyle',
+    title: 'Inscription - Bienvenue a la maison du vinyle',
     description: 'Créez un compte pour accéder à nos offres spéciales et personnaliser votre expérience musicale.',
   },
   '/connexion': {
-    title: 'Connexion | VinylstoreLyon - Bienvenue a la maison du vinyle',
+    title: 'Connexion - Bienvenue a la maison du vinyle',
     description: 'Connectez-vous pour accéder à votre collection personnelle et gérer vos commandes.',
   },
   '/panier': {
-    title: 'Panier | VinylstoreLyon - Bienvenue a la maison du vinyle',
+    title: 'Panier - Bienvenue a la maison du vinyle',
     description: 'Consultez et gérez les vinyles que vous avez ajoutés à votre panier.',
   },
   '/products/:id': {
-    title: 'Détails du produit | VinylstoreLyon - Bienvenue a la maison du vinyle',
+    title: 'Détails du produit - Bienvenue a la maison du vinyle',
     description: 'Découvrez les détails de ce vinyle et ajoutez-le à votre collection.',
   },
   '/expedition': {
-    title: 'Expédition | VinylstoreLyon - Bienvenue a la maison du vinyle',
+    title: 'Expédition - Bienvenue a la maison du vinyle',
     description: 'Choisissez vos options de livraison pour recevoir vos vinyles rapidement et en toute sécurité.',
   },
   '/paiement': {
-    title: 'Paiement | VinylstoreLyon - Bienvenue a la maison du vinyle',
+    title: 'Paiement - Bienvenue a la maison du vinyle',
     description: 'Saisissez vos informations de paiement en toute sécurité pour finaliser votre commande.',
   },
   '/commander': {
-    title: 'Confirmation de commande | VinylstoreLyon - Bienvenue a la maison du vinyle',
+    title: 'Confirmation de commande - Bienvenue a la maison du vinyle',
     description: 'Confirmez les détails de votre commande avant de la valider.',
   },
   '/commande/:id': {
-    title: 'Commande | VinylstoreLyon - Bienvenue a la maison du vinyle',
+    title: 'Commande - Bienvenue a la maison du vinyle',
     description: 'Consultez les détails de votre commande et suivez son statut.',
   },
   '/profil': {
-    title: 'Profil utilisateur | VinylstoreLyon - Bienvenue a la maison du vinyle',
+    title: 'Profil utilisateur - Bienvenue a la maison du vinyle',
     description: 'Gérez vos informations personnelles et vos préférences musicales.',
   },
   '/historique': {
-    title: 'Historique des commandes | VinylstoreLyon - Bienvenue a la maison du vinyle',
+    title: 'Historique des commandes - Bienvenue a la maison du vinyle',
     description: 'Consultez l’historique de vos achats et revivez vos moments musicaux.',
   },
 };
@@ -73,8 +73,8 @@ function App() {
     checkUser();
 
     const metadata = routeMetadata[location.pathname] || {
-      title: 'VinylstoreLyon - Bienvenue a la maison du vinyle',
-      description: 'Explorez le monde de la musique avec VinylstoreLyon.',
+      title: 'VinylStoreLyon - Bienvenue a la maison du vinyle',
+      description: 'Explorez le monde de la musique avec VinylStoreLyon.',
     };
     document.title = metadata.title;
     const metaDescription = document.querySelector('meta[name="description"]');

@@ -33,7 +33,7 @@ export const TopButtonIcon = styled(Icon)`
 export const StoreContainer = styled.div`
   width: 100%;
   margin: auto;
-  max-width: 1440px;
+  max-width: 1380px;
 `;
 
 export const StoreHeaderContainer = styled.div`
@@ -49,12 +49,11 @@ export const StoreHeaderContainer = styled.div`
 export const StoreHeaderContent = styled.div`
   width: 90%;
   margin: auto;
-  padding: 1.25rem 0;
+  padding: 3rem 0;
   max-width: 1440px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   @media (max-width: 768px) {
     width: 100%;
     margin: auto;
@@ -63,21 +62,25 @@ export const StoreHeaderContent = styled.div`
     justify-content: space-between;
     background-color: white;
     text-align: center;
-
   }
 `;
 
 export const LogoStore = styled.img`
-  width: 175px;
-  margin: 1.5rem auto;
+  width: 215px;
+  margin: auto;
+
+  @media (max-width: 768px) {
+    width: 220px;
+    margin: 2.4rem auto;
+  }
 `;
 
 export const ContentContainer = styled.div`
   width: 90%;
-  max-width: 1440px;
   margin:auto;
+  max-width: 1380px;
   @media (max-width: 768px) {
-    margin-top: 22vh;
+    margin-top: 27vh;
     border: none
     display: grid;
     place-items: center;
@@ -238,8 +241,8 @@ export const DropDownLink = styled(Link)`
 
 export const SearchWrapper = styled.div`
   width: 100%;
-  margin: auto;
-  padding: 20px;
+  margin: 0 auto 1rem ;
+  padding: 10px 20px;
   display: flex;
   align-items: center;
   border-bottom: 1px solid rgba(0, 0, 0, 1);
@@ -254,6 +257,7 @@ export const SearchInput = styled.input`
   text-transform: uppercase;
   letter-spacing: 5px;
   font-size: 0.5rem;
+  padding: 1rem 0;
   &:focus {
     outline: none;
   }
@@ -284,14 +288,14 @@ export const VinylList = styled.div`
     display: grid;
     place-items: center;
     grid-template-columns: repeat(4, minmax(0, 100%));
-    gap: 1rem 3rem;
+    gap: 1rem 4rem;
   }
 `;
 
 /*------------------------------------------------------------VinylistItem------------------------------------------------------------*/
 
 export const VinylItem = styled.div`
-  width: 275px;
+  width: 250px;
   margin: 2rem auto;
   display: flex;
   flex-direction: column;

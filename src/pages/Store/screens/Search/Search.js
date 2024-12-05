@@ -12,7 +12,7 @@ export const Input = ({ setSerchTerm }) => {
         placeholder='chercher'
         onChange={(e) => setSerchTerm(e.target.value.toLowerCase())}
       />
-      <IoSearch className='search_icon' />
+      <IoSearch style={{ fontSize: "1.3rem" }}/>
     </>
   )
 }

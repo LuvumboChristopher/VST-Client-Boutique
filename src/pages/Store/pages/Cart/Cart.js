@@ -3,13 +3,21 @@ import { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { CartItem } from './components/CartItem'
 import { round2 } from '../Order/Order'
-import { CartContentContainer, ItemResume, PaimentButton, Panierwrapper, TotalToPay, Totalwrapper } from './style'
+import {
+  CartContentContainer,
+  ItemResume,
+  PaimentButton,
+  Panierwrapper,
+  TotalToPay,
+  Totalwrapper,
+  EmptyCartMessage,
+} from './style'
 import useAuth from '../../../../hooks/useAuth'
 import { StoreHeader } from '../../components/StoreHeader'
 import { StoreFooter } from '../../components/StoreFooter'
 import { StoreContext } from '../../../../context/StoreProvider'
 import { StoreContainer } from '../../style'
-
+import { BsCartPlusFill } from 'react-icons/bs'
 
 export default function CartScreen() {
   const { auth } = useAuth()
@@ -34,6 +42,10 @@ export default function CartScreen() {
     navigate('/connexion?redirect=/expedition')
   }
 
+  const goToVinylsPage = () => {
+    navigate('/vinyls') // Ajusta la ruta según tu configuración
+  }
+
   return (
     <>
       <StoreContainer>
@@ -41,7 +53,11 @@ export default function CartScreen() {
         <CartContentContainer>
           <Panierwrapper>
             {cartItems.length === 0 ? (
-              <div></div>
+              <EmptyCartMessage>
+                <BsCartPlusFill style={{ fontSize: "2.5rem", marginBottom: "1rem" }} />
+                <p>Votre panier est vide 
+                </p>
+              </EmptyCartMessage>
             ) : (
               <CartItem
                 cartItems={cartItems}

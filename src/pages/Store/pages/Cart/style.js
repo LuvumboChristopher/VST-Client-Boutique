@@ -19,6 +19,20 @@ export const CartContentContainer = styled.div`
   }
 `
 
+export const EmptyCartMessage = styled.div`
+  text-align: center;
+
+  p {
+    font-size: 13px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: none;
+    cursor: pointer;
+  }
+
+`;
+
 export const Panierwrapper = styled.div`
   width: 100%;
   margin: auto;
