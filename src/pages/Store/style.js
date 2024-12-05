@@ -49,7 +49,7 @@ export const StoreHeaderContainer = styled.div`
 export const StoreHeaderContent = styled.div`
   width: 90%;
   margin: auto;
-  padding: 2rem 0;
+  padding: 1.25rem 0;
   max-width: 1440px;
   display: flex;
   justify-content: space-between;
