@@ -66,7 +66,7 @@ export const StoreHeaderContent = styled.div`
 `;
 
 export const LogoStore = styled.img`
-  width: 215px;
+  width: 185px;
   margin: auto;
 
   @media (max-width: 768px) {
@@ -241,8 +241,7 @@ export const DropDownLink = styled(Link)`
 
 export const SearchWrapper = styled.div`
   width: 100%;
-  margin: 0 auto 1rem ;
-  padding: 10px 20px;
+  margin: 0 auto 1.5rem ;
   display: flex;
   align-items: center;
   border-bottom: 1px solid rgba(0, 0, 0, 1);
