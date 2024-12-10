@@ -40,6 +40,7 @@ export const StoreHeaderContainer = styled.div`
   width: 100%;
   margin: 0.5rem auto;
   @media (max-width: 768px) {
+    margin: auto;
     top: 0;
     position: fixed;
     z-index: 1;
@@ -70,8 +71,7 @@ export const LogoStore = styled.img`
   margin: auto;
 
   @media (max-width: 768px) {
-    width: 220px;
-    margin: 2.4rem auto;
+    margin: 2.5rem auto;
   }
 `;
 
