@@ -38,7 +38,7 @@ export const StoreContainer = styled.div`
 
 export const StoreHeaderContainer = styled.div`
   width: 100%;
-  margin: auto;
+  margin: 0.5rem auto;
   @media (max-width: 768px) {
     top: 0;
     position: fixed;
@@ -265,8 +265,8 @@ export const SearchInput = styled.input`
   }
 `;
 export const SearchResultContainer = styled.div`
-  width: 95%;
-  margin: 2rem auto;
+  width: 100%;
+  margin: 4rem auto;
 `;
 /*------------------------------------------------------------Vinylist------------------------------------------------------------*/
 
